@@ -1,0 +1,99 @@
+.profile-container {
+  background: #fff;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.profile-container h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.profile-info p {
+  margin: 0.5rem 0;
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+.committee-actions {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.committee-section {
+  margin-top: 1.5rem;
+  background: var(--primary-light);
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px #2563eb22;
+}
+
+.committee-section button {
+  margin: 0.25rem;
+}
+
+.committee-section h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* Styles des modales (repris de l'admin) */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  color: var(--primary);
+  position: relative;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--primary);
+}
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.form-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}

@@ -1,0 +1,107 @@
+/* Styles spécifiques pour la page d'inscription des candidats */
+
+#candidatPage {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+#candidatPage h1 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.election-filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.election-btn {
+  background: var(--primary-light);
+  color: var(--primary);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.election-btn:hover {
+  background: var(--secondary);
+  color: var(--white);
+}
+
+#candidature-info {
+  background: var(--primary-light);
+  border-left: 4px solid var(--primary);
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  border-radius: var(--radius);
+  font-weight: 600;
+  color: var(--primary);
+}
+
+#newCandidature {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.primary-btn,
+.secondary-btn {
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: background var(--transition);
+}
+
+.primary-btn {
+  background: var(--primary);
+  color: var(--white);
+}
+.primary-btn:hover {
+  background: var(--secondary);
+}
+
+.secondary-btn {
+  background: var(--border);
+  color: var(--text);
+}
+.secondary-btn:hover {
+  background: var(--primary-light);
+}

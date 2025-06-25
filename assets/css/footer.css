@@ -1,0 +1,129 @@
+.site-footer {
+  background-color: var(--header);
+  color: var(--light);
+  padding: 1.2rem 0.5rem 0.5rem; /* Réduit */
+  font-size: 0.92rem; /* Optionnel, un peu plus petit */
+}
+
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Plus compact */
+  gap: 1.2rem; /* Réduit */
+  align-items: flex-start;
+}
+
+.footer-brand {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  height: 38px; /* Plus petit */
+  margin-bottom: 0.4rem;
+  width: auto;
+}
+
+.footer-brand h4 {
+  margin: 0 0 0.4rem;
+  font-size: 1.1rem;
+  color: var(--light);
+}
+
+.footer-brand p {
+  margin: 0;
+  font-size: 0.85rem; /* Plus petit */
+  color: var(--muted);
+  max-width: 260px; /* Plus étroit */
+}
+
+.footer-links h4,
+.footer-social h4 {
+  color: var(--light);
+  margin-bottom: 0.5rem;
+}
+
+.footer-links {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;           /* Ajouté */
+  grid-template-columns: 1fr 1fr; /* 2 colonnes */
+  gap: 0.5rem 1.5rem;      /* Espace entre lignes et colonnes */
+  justify-items: start;    /* Alignement à gauche dans chaque colonne */
+}
+.footer-links li {
+  margin-bottom: 0.2rem; /* Réduit */
+}
+
+.footer-links a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-social .social-icons {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.footer-social {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-social a {
+  color: var(--muted);
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 1rem; /* Réduit */
+  padding-top: 0.5rem; /* Réduit */
+  font-size: 0.80rem; /* Plus petit */
+}
+}
+
+.back-to-top {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.back-to-top:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 600px) {
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}

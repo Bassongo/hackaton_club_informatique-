@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* =========================
+   Variables globales
+   ========================= */
+:root {
+    --primary: #2563eb;
+    --primary-light: #e0f2fe;
+    --secondary: #38bdf8;
+    --accent: #fbbf24;
+    --background: #ffffff;
+    --white: #ffffff;
+    --text: #1e293b;
+    --gray: #64748b;
+    --border: #e5e7eb;
+    --header : #34559d;
+    --radius: 18px;
+    
+    --transition: 0.18s cubic-bezier(.4,0,.2,1);
+}
+
+
+/* =========================
+   Reset & base
+   ========================= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text);
+    background: var(--background);
+    line-height: 1.6;
+}
+
+/* =========================
+   Footer
+   ========================= */
+footer {
+    margin-top: 2rem;
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--primary-light);
+    padding: 1.5rem 1rem 1rem 1rem;
+    border-radius: 18px 18px 0 0;
+    box-shadow: 0 -2px 12px #2563eb11;
+}
+.footer-brand {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.7rem;
+}
+.footer-logo {
+    height: 32px;
+    width: auto;
+    margin-right: 0.7rem;
+}
+.footer-title {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: 0.5px;
+}
+.footer-links {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 0.7rem;
+}
+.footer-links a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.05rem;
+    transition: color 0.18s;
+}
+.footer-links a:hover {
+    color: var(--accent);
+}
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.7rem;
+}
+.social-links a {
+    color: var(--primary);
+    font-size: 1.3rem;
+    transition: color 0.18s;
+}
+.social-links a:hover {
+    color: var(--accent);
+}
+.footer-copy {
+    color: var(--gray);
+    font-size: 0.98rem;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+@media (max-width: 600px) {
+    .footer-content { padding: 1rem 0.2rem 0.7rem 0.2rem; }
+    .footer-links { flex-direction: column; gap: 0.5rem; align-items: center; }
+}
+
+/* =========================
+   Sélecteur d'élection (commun)
+   ========================= */
+.selection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2rem;
+    margin-bottom: 2.2rem;
+    background: var(--primary-light);
+    padding: 1rem 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 12px #2563eb11;
+}
+.selection label {
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 1.08rem;
+    letter-spacing: 0.5px;
+    margin-right: 1.5rem;
+}
+.selection select {
+    margin-left: auto;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    border: 1.5px solid var(--primary-light);
+    background: var(--white);
+    color: var(--primary);
+    font-size: 1.08rem;
+    font-weight: 500;
+    outline: none;
+    transition: border var(--transition), box-shadow var(--transition);
+    box-shadow: 0 1px 4px #2563eb11;
+}
+.selection select:focus {
+    border: 1.5px solid var(--primary);
+    box-shadow: 0 2px 8px #2563eb22;
+}
+
+/* =========================
+   Pagination
+   ========================= */
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2.2rem;
+}
+.pagination button, .pagination .btn {
+    min-width: 120px;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    padding: 0.48rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background var(--transition), box-shadow var(--transition);
+    box-shadow: 0 2px 8px #2563eb22;
+}
+.pagination button[disabled], .pagination .btn:disabled {
+    background: #b6c6f5;
+    cursor: not-allowed;
+    color: #fff;
+    box-shadow: none;
+}
+.pagination button:hover:not([disabled]), .pagination .btn:hover:not([disabled]) {
+    background: var(--secondary);
+}
+
+/* =========================
+   Scrollbar personnalisée
+   ========================= */
+::-webkit-scrollbar {
+    width: 8px;
+    background: var(--primary-light);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 8px;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-content {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    box-shadow: 0 4px 32px #0005;
+    max-width: 95vw;
+    max-height: 90vh;
+    overflow: auto;
+    text-align: center;
+    position: relative;
+}
+.modal-content img {
+    max-width: 350px;
+    max-height: 60vh;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+.close-modal {
+    position: absolute;
+    top: 10px; right: 18px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #003b6f;
+    cursor: pointer;
+    font-weight: bold;
+}
+@media (max-width: 600px) {
+    .modal-content img { max-width: 90vw; }
+    .modal-content { padding: 1rem 0.3rem; }
+}
+
+body, html {
+    overflow: visible !important;
+    position: static !important;
+}
