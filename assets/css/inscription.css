@@ -1,0 +1,148 @@
+:root {
+    --primary:#1a73e8;
+    --secondary: #fff;
+    --text: #fff;
+    --white: #fff;
+    --gray: #b0b0b0;
+}
+/* Fond similaire à login */
+body {
+    background: url('../img/OIP.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+/* Bloc inscription centré et sombre */
+.auth-container {
+    max-width: 500px;
+    margin: 3rem auto;
+    padding: 2.5rem 2rem;
+    background: rgba(20, 40, 40, 0.95); /* couleur sombre comme login */
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    color: var(--text);
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.auth-form h1 {
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2em;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px #000;
+}
+
+.auth-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.auth-form label {
+    font-weight: 600;
+    color: var(--white);
+}
+
+.auth-form input,
+.auth-form select {
+    padding: 0.8rem;
+    border: none;
+    border-bottom: 2px solid #fff;
+    border-radius: 4px;
+    background: #223344;
+    color: #fff;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+.auth-form input:focus,
+.auth-form select:focus {
+    border-color: #00bfff;
+    outline: none;
+    box-shadow: none;
+}
+
+
+.auth-form button,
+.auth-form .btn-primary {
+    background: #00bfff;
+    color: #222;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.auth-form button:hover,
+.auth-form .btn-primary:hover {
+    background: #fff;
+    color: #00bfff;
+}
+.auth-form button:hover,
+.auth-form .btn-primary:hover {
+    background: #fff;
+    color: #00bfff;
+}
+
+.btn-secondary {
+    background: #fff;
+    color: #00bfff;
+    border: 2px solid #00bfff;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-secondary:hover {
+    background: #00bfff;
+    color: #fff;
+}
+.success-message {
+    background: #28a745;
+    color: #fff;
+    padding: 0.7em 1em;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    text-align: center;
+    font-weight: bold;
+}
+.error-message {
+    background: #dc3545;
+    color: #fff;
+    padding: 0.7em 1em;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.password-rules {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-top: -0.5rem;
+}
+
+@media (max-width: 600px) {
+    .auth-container {
+        padding: 1rem 0.5rem;
+        min-width: 90vw;
+    }
+    .auth-form h1 {
+        font-size: 1.3em;
+    }
+}

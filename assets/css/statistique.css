@@ -1,0 +1,121 @@
+/* =========================
+   Statistiques spécifique
+   ========================= */
+.main-stats {
+    max-width: 1200px;
+    margin: 2rem auto 2rem auto;
+    padding: 2rem 1rem;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 24px 0 rgba(37, 99, 235, 0.10);
+}
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary);
+}
+.stats-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+}
+.stats-card {
+    background: var(--primary-light);
+    border-radius: 14px;
+    box-shadow: 0 2px 10px #2563eb11;
+    padding: 1.5rem 2.5rem;
+    min-width: 220px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.stats-card .stat-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+.stats-card .stat-label {
+    font-size: 1.1rem;
+    color: var(--gray);
+}
+.stats-graph {
+    background: var(--white);
+    border-radius: 14px;
+    box-shadow: 0 2px 10px #2563eb11;
+    padding: 2rem 1rem;
+    margin-bottom: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#statsChart {
+    max-width: 700px;
+    width: 100%;
+    height: 340px;
+}
+.stats-detail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+.stats-poste {
+    background: var(--primary-light);
+    border-radius: 14px;
+    box-shadow: 0 2px 10px #2563eb11;
+    padding: 1.5rem 1.2rem;
+    min-width: 260px;
+    max-width: 340px;
+    flex: 1 1 320px;
+    margin-bottom: 1.5rem;
+}
+.stats-poste h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.stats-candidats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+.stats-candidat {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--white);
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+    box-shadow: 0 1px 4px #2563eb11;
+}
+.stats-candidat img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+    background: var(--white);
+}
+.stats-candidat .candidat-info {
+    flex: 1;
+}
+.stats-candidat .candidat-nom {
+    font-weight: 600;
+    color: var(--text);
+}
+.stats-candidat .candidat-votes {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-left: 1rem;
+}
+@media (max-width: 900px) {
+    .main-stats { padding: 1rem 0.2rem 2rem 0.2rem; }
+    .stats-cards, .stats-detail { flex-direction: column; align-items: center; }
+    .stats-card, .stats-poste { min-width: 160px; max-width: 100%; }
+}

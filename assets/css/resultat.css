@@ -1,0 +1,113 @@
+/* =========================
+   Résultats spécifique
+   ========================= */
+.main-result {
+    max-width: 1200px;
+    margin: 2rem auto 2rem auto;
+    padding: 2rem 1rem;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 24px 0 rgba(37, 99, 235, 0.10);
+}
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary);
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+.result-block {
+    background: var(--primary-light);
+    border-radius: 16px;
+    box-shadow: 0 2px 10px #2563eb11;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+}
+.result-block:hover {
+    box-shadow: 0 8px 32px #2563eb22;
+}
+.result-title {
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+.winner-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background: var(--white);
+    border-radius: 14px;
+    box-shadow: 0 2px 10px #fbbf2444;
+    padding: 1.2rem 2rem;
+    margin-bottom: 1.2rem;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+.winner-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 32px #fbbf2444;
+}
+.winner-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid var(--accent);
+    object-fit: cover;
+    background: var(--white);
+    box-shadow: 0 2px 12px #fbbf2444;
+}
+.winner-info {
+    flex: 1;
+}
+.winner-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+.winner-percent {
+    font-size: 1.1rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-top: 0.2rem;
+}
+.winner-trophy {
+    font-size: 2.5rem;
+    margin-left: 1rem;
+    color: var(--accent);
+    filter: drop-shadow(0 2px 8px #fbbf2444);
+    animation: winner-trophy-pop 1s;
+}
+@keyframes winner-trophy-pop {
+    0% { transform: scale(0.5) rotate(-20deg);}
+    60% { transform: scale(1.2) rotate(10deg);}
+    100% { transform: scale(1) rotate(0);}
+}
+.no-winner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    color: var(--gray);
+}
+.no-winner-icon {
+    font-size: 3rem;
+    margin-bottom: 0.7rem;
+}
+.no-winner-msg {
+    font-size: 1.13rem;
+    text-align: center;
+    color: var(--gray);
+}
+@media (max-width: 900px) {
+    .main-result { padding: 1rem 0.2rem 2rem 0.2rem; }
+    .winner-card { flex-direction: column; gap: 0.7rem; align-items: flex-start; }
+}
