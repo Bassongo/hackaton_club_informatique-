@@ -169,8 +169,8 @@ Créer une **application sécurisée, simple et intuitive** permettant d'organis
 
 ## 🚀 Déploiement
 
-Vous pouvez tester l'application en ligne via ce lien (⚠️ à ajouter une fois déployé) :  
-🔗 [https://aliceblue-locust-950953.hostingersite.com/](#)
+Vous pouvez tester l'application en ligne via ce lien :  
+🔗 [E-election](https://aliceblue-locust-950953.hostingersite.com/)
 
 ---
 
